@@ -1,60 +1,84 @@
-📌 Project Overview
+# ORCA_TOP – Physical Design Automation (RTL → GDSII)
 
-ORCA_TOP is a stage-wise Physical Design automation project developed using Synopsys IC Compiler II (ICC2).
-The objective of this repository is to demonstrate industry-style TCL scripting, structured Physical Design flow, and signoff awareness for the RTL-to-GDSII ASIC design methodology.
+## 📌 Project Overview
 
-This repository is built to reflect real project practices, where each Physical Design stage is automated, validated, and version-controlled.
+**ORCA_TOP** is a stage-wise **Physical Design automation project** developed using **Synopsys IC Compiler II (ICC2)**.  
+This repository demonstrates **industry-style TCL scripting**, a **structured Physical Design flow**, and **signoff awareness** aligned with real-world **RTL-to-GDSII ASIC methodology**.
 
-🎯 Project Objectives
+The project is organized to reflect **production-level Physical Design practices**, where each PD stage is:
+- Fully automated
+- Independently debuggable
+- Properly validated
+- Version-controlled
 
-Automate the complete Physical Design flow using ICC2 TCL scripts
+---
 
-Follow industry-standard directory organization
+## 🎯 Project Objectives
 
-Enable stage-level execution and debugging
+- Automate the complete **Physical Design flow** using ICC2 TCL scripts  
+- Follow **industry-standard directory organization**
+- Enable **stage-level execution and debugging**
+- Build an **interview-ready & recruiter-friendly** PD project
+- Demonstrate awareness of **timing, power, and physical integrity**
 
-Build an interview-ready and recruiter-friendly PD project
+---
 
-Demonstrate awareness of timing, power, and physical integrity
+## 🛠 Tools & Technology
 
-🛠 Tools & Technology
-Category	Details
-Physical Design Tool	Synopsys IC Compiler II (ICC2)
-Timing Analysis	Synopsys PrimeTime
-RC Extraction	Synopsys StarRC
-Technology Node	28 nm
-Design Type	Multi-voltage ASIC block
-Flow	RTL → GDSII
-Scripting Language	TCL
+| Category | Details |
+|-------|--------|
+| Physical Design Tool | Synopsys IC Compiler II (ICC2) |
+| Timing Analysis | Synopsys PrimeTime |
+| RC Extraction | Synopsys StarRC |
+| Technology Node | 28 nm |
+| Design Type | Multi-voltage ASIC block |
+| Flow | RTL → GDSII |
+| Scripting Language | TCL |
 
-🧩 Physical Design Flow (Stage-wise Automation)
-✅ Stage 1: Import Design (Completed)
+---
 
-Objective:
-Create a clean ICC2 environment and import the design with all dependencies.
+## 🧩 Physical Design Flow (Stage-wise Automation)
 
-Automated Tasks:
-Search path configuration
-Reference NDM libraries (RVT / HVT / LVT / SRAM)
-Working library creation
-Gate-level netlist import
-Design linking
-MMMC timing constraints loading
-ScanDEF import
-UPF (power intent) loading and commit
-Initial design sanity checks
-Report generation
-Design saved as import_design block
+### ✅ Stage 1: Import Design *(Completed)*
 
-📂 scripts/01_design_setup/Import_design.tcl
+#### Objective  
+Create a clean ICC2 environment and import the design with all required dependencies.
 
-👤 Author
+#### Automated Tasks
+- Search path configuration  
+- Reference NDM libraries (RVT / HVT / LVT / SRAM)  
+- Working library creation  
+- Gate-level netlist import  
+- Design linking  
+- MMMC timing constraints loading  
+- Scan DEF import  
+- UPF (power intent) loading and commit  
+- Initial design sanity checks  
+- Report generation  
+- Save design as **import_design** block  
 
-Rajshekhar S Hiremath
-ASIC Physical Design Engineer
-RTL → GDSII | ICC2 | PrimeTime
+📂 **Script Location**
+scripts/01_design_setup/Import_design.tcl
 
-⚠️ Disclaimer
 
-This project is intended for learning and demonstration purposes only.
-Scripts are generic and reusable; tool-generated databases are excluded.
+---
+
+## 👤 Author
+
+**Rajshekhar S Hiremath**  
+ASIC Physical Design Engineer  
+
+**Expertise:**  
+RTL → GDSII | ICC2 | PrimeTime  
+
+---
+
+## ⚠️ Disclaimer
+
+This project is intended **strictly for learning and demonstration purposes**.  
+All scripts are **generic and reusable**.  
+Tool-generated databases and proprietary data are **intentionally excluded**.
+
+---
+
+⭐ If you are a **VLSI fresher or PD learner**, this repository is designed to help you understand **real-world Physical Design scripting practices**.
