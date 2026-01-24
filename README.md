@@ -58,7 +58,7 @@ Create a clean ICC2 environment and import the design with all required dependen
 - Save design as **import_design** block  
 
 📂 **Script Location**
-scripts/01_design_setup/Import_design.tcl
+scripts/Import_design.tcl
 
 ##  ✅  Stage 2: Floorplan 
 
@@ -83,7 +83,7 @@ Define the physical boundaries of the design by creating the core and die area, 
 - Save floorplan block for next PD stage  
 
 📂 **Script Location**
-scripts/02_floorplan/floorplan.tcl 
+scripts/floorplan.tcl 
 
 ---
 
