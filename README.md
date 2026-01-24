@@ -60,7 +60,30 @@ Create a clean ICC2 environment and import the design with all required dependen
 📂 **Script Location**
 scripts/01_design_setup/Import_design.tcl
 
+##  ✅  Stage 2: Floorplan (Completed)
 
+### Objective
+Define the physical boundaries of the design by creating the core and die area, placing ports and macros, defining voltage regions, and preparing the design for placement and routing.
+
+### Automated Tasks
+- Open imported design database and create floorplan block  
+- Core and die area definition using utilization, offset, and shape  
+- Floorplan initialization with site rows  
+- Port placement using pin guides and routing layer constraints  
+- Voltage area creation for multi-voltage power domains  
+- Macro-only placement with hierarchy-based grouping  
+- Macro spacing rule definition (horizontal and vertical)  
+- Keepout margin creation around hard macros  
+- Partial placement blockage generation  
+- Routing layer constraint setup  
+- Macro fixing and placement legalization  
+- Congestion analysis and reporting  
+- Tap cell and boundary cell insertion  
+- Physical design sanity checks  
+- Save floorplan block for next PD stage  
+
+📂 **Script Location**
+scripts/02_floorplan/floorplan.tcl
 ---
 
 ## 👤 Author
