@@ -39,7 +39,7 @@ The project is organized to reflect **production-level Physical Design practices
 
 ## 🧩 Physical Design Flow (Stage-wise Automation)
 
-### ✅ Stage 1: Import Design *(Completed)*
+### ✅ Stage 1: Import Design 
 
 #### Objective  
 Create a clean ICC2 environment and import the design with all required dependencies.
@@ -60,12 +60,12 @@ Create a clean ICC2 environment and import the design with all required dependen
 📂 **Script Location**
 scripts/01_design_setup/Import_design.tcl
 
-##  ✅  Stage 2: Floorplan (Completed)
+##  ✅  Stage 2: Floorplan 
 
-### Objective
+#### Objective
 Define the physical boundaries of the design by creating the core and die area, placing ports and macros, defining voltage regions, and preparing the design for placement and routing.
 
-### Automated Tasks
+#### Automated Tasks
 - Open imported design database and create floorplan block  
 - Core and die area definition using utilization, offset, and shape  
 - Floorplan initialization with site rows  
@@ -83,7 +83,8 @@ Define the physical boundaries of the design by creating the core and die area, 
 - Save floorplan block for next PD stage  
 
 📂 **Script Location**
-scripts/02_floorplan/floorplan.tcl
+scripts/02_floorplan/floorplan.tcl 
+
 ---
 
 ## 👤 Author
