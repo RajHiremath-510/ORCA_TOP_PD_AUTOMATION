@@ -131,8 +131,8 @@ Implement a robust and DRC-clean power delivery network by creating power meshes
 - Missing via report
 - Power DRC report
 
-### Script Location
-scripts/Powerplan.tcl
+### 📁 Script Location
+`scripts/powerplan.tcl`
 ---
 
 ## 👤 Author
