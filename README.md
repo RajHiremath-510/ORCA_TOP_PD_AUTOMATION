@@ -80,7 +80,17 @@ Define the physical boundaries of the design by creating the core and die area, 
 - Congestion analysis and reporting  
 - Tap cell and boundary cell insertion  
 - Physical design sanity checks  
-- Save floorplan block for next PD stage  
+- Save floorplan block for next PD stage
+  
+  ### Generated Outputs
+- Floorplan design block (`floorplan`)  
+- Congestion report  
+- Boundary cell report  
+- Tap cell report  
+- Physical constraint report  
+- Pin placement report  
+
+---
 
 📂 **Script Location**
 scripts/floorplan.tcl 
