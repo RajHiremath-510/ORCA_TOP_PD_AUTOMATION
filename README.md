@@ -92,6 +92,47 @@ Define the physical boundaries of the design by creating the core and die area, 
 ### 📁 Script Location
 `scripts/floorplan.tcl`
 
+## 🔌 Stage 3: Power Planning 
+
+### Objective
+Implement a robust and DRC-clean power delivery network by creating power meshes, straps, rings, and standard cell rails to ensure reliable power integrity across all voltage domains.
+
+### Automated Tasks
+- Sanity check for power and ground nets (VDD / VSS / VDDH)
+- Open floorplan database and create power planning block
+- Removal of existing PG strategies, patterns, regions, and routes
+- Power net connectivity update and validation
+- Definition of PG via master rules
+- Identification and grouping of hard macros by power domain
+- Creation of top-level power mesh on higher metal layers (M7 / M8)
+- Power mesh strategy definition for core and voltage areas
+- Creation of lower metal power straps (M2)
+- Multi-layer PG strategy compilation with via rules
+- Macro power ring creation for VDD, VSS, and VDDH
+- Macro pin power connectivity using scattered pin strategy
+- Standard cell power rail generation
+- PG connectivity, missing via, and DRC checks
+- Save power-planned design block for next PD stage
+
+### Key Power Structures Implemented
+- **M7 & M8** : Global power mesh  
+- **M2** : Local power straps  
+- **M5 & M6** : Macro power rings  
+- **M1** : Standard cell power rails  
+
+### Key Checks & Reports
+- Power connectivity check  
+- Missing PG via check  
+- Power DRC verification  
+
+### Generated Outputs
+- Power-planned design block (`powerplan`)
+- Power connectivity report
+- Missing via report
+- Power DRC report
+
+### Script Location
+scripts/Powerplan.tcl
 ---
 
 ## 👤 Author
