@@ -89,9 +89,8 @@ Define the physical boundaries of the design by creating the core and die area, 
 - Tap cell report
 - Physical constraint report
 - Pin placement report
----
-📂 **Script Location**
-scripts/floorplan.tcl 
+### 📁 Script Location
+`scripts/floorplan.tcl`
 
 ---
 
