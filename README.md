@@ -57,8 +57,7 @@ Create a clean ICC2 environment and import the design with all required dependen
 - Report generation  
 - Save design as **import_design** block  
 
-📂 **Script Location**
-scripts/Import_design.tcl
+📁 script location: `Import_design.tcl`
 
 ##  ✅  Stage 2: Floorplan 
 
@@ -89,8 +88,8 @@ Define the physical boundaries of the design by creating the core and die area, 
 - Tap cell report
 - Physical constraint report
 - Pin placement report
-### 📁 Script Location
-`scripts/floorplan.tcl`
+  
+📁 script location: `scripts/flooorplan.tcl`
 
 ## 🔌 Stage 3: Power Planning 
 
@@ -131,8 +130,8 @@ Implement a robust and DRC-clean power delivery network by creating power meshes
 - Missing via report
 - Power DRC report
 
-### 📁 Script Location
-`scripts/powerplan.tcl`
+📁 script location: `scripts/powerplan.tcl`
+
 ---
 
 ## 👤 Author
