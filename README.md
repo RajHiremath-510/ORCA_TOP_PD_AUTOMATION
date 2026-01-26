@@ -57,7 +57,7 @@ Create a clean ICC2 environment and import the design with all required dependen
 - Report generation  
 - Save design as **import_design** block  
 
-📁 script location: `Import_design.tcl`
+📁 script location: `scripts/1_Import_design.tcl`
 
 ##  ✅  Stage 2: Floorplan 
 
@@ -89,7 +89,7 @@ Define the physical boundaries of the design by creating the core and die area, 
 - Physical constraint report
 - Pin placement report
   
-📁 script location: `scripts/flooorplan.tcl`
+📁 script location: `scripts/2_flooorplan.tcl`
 
 ## 🔌 Stage 3: Power Planning 
 
@@ -130,7 +130,7 @@ Implement a robust and DRC-clean power delivery network by creating power meshes
 - Missing via report
 - Power DRC report
 
-📁 script location: `scripts/powerplan.tcl`
+📁 script location: `scripts/3_powerplan.tcl`
 
 ## 📐 Stage 4: Placement (Completed)
 
@@ -180,7 +180,7 @@ Place and optimize standard cells while meeting timing, congestion, and physical
 - Final optimization placement block  
 - Detailed placement and QoR reports  
 
-📁 script location: `scripts/placement.tcl`
+📁 script location: `scripts/4_placement.tcl`
 
 ---
 
