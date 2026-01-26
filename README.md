@@ -132,6 +132,56 @@ Implement a robust and DRC-clean power delivery network by creating power meshes
 
 📁 script location: `scripts/powerplan.tcl`
 
+## 📐 Stage 4: Placement (Completed)
+
+### Objective
+Place and optimize standard cells while meeting timing, congestion, and physical constraints, ensuring a legal and high-quality placement ready for Clock Tree Synthesis (CTS).
+
+### Automated Tasks
+- Creation of report directories for placement stages
+- Pre-placement sanity checks:
+  - Power connectivity verification
+  - Multi-voltage design checks
+  - Physical constraint and legality checks
+  - QoR and utilization reporting
+- Scan DEF reloading and MMMC timing constraints sourcing
+- Placement-related application option tuning:
+  - Congestion-driven placement
+  - Timing-driven placement
+  - Advanced legalization
+- Clock network set as ideal during placement
+- Routing layer constraint definition
+- Hard macro fixing before standard cell placement
+- Coarse placement and legalization
+- Incremental placement refinement
+- Multi-stage placement optimization:
+  - Initial DRC placement
+  - Initial timing optimization
+  - Final placement
+  - Final placement optimization
+- Cell insertion analysis (buffers, inverters)
+- Design block save at each major placement milestone
+
+### Key Checks & Reports
+- Power connectivity and PG DRC checks
+- Multi-voltage design checks
+- Placement legality verification
+- Congestion analysis
+- Utilization reporting
+- Global timing reports
+- High fanout net analysis
+- Constraint violation reports
+
+### Generated Outputs
+- Rough legalized placement block  
+- Initial DRC placement block  
+- Initial optimization placement block  
+- Final placement block  
+- Final optimization placement block  
+- Detailed placement and QoR reports  
+
+📁 script location: `scripts/placement.tcl`
+
 ---
 
 ## 👤 Author
