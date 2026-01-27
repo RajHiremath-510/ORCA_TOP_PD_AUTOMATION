@@ -182,6 +182,59 @@ Place and optimize standard cells while meeting timing, congestion, and physical
 
 📁 script location: `scripts/4_placement.tcl`
 
+## ⏱️ Stage 5: Clock Tree Synthesis (CTS) (Completed)
+
+### Objective
+Build and optimize a balanced and low-skew clock distribution network that meets timing, transition, and signal integrity requirements across all operating corners and scenarios.
+
+### Automated Tasks
+- Pre-CTS sanity checks and design validation
+- Clock tree integrity and design consistency checks
+- Derivation of clock cell reference list
+- CTS cell control:
+  - Exclude all library cells from CTS by default
+  - Enable only selected LVT/RVT buffers and inverters
+- Clock routing rule creation using non-default rules (NDR):
+  - Double width and spacing
+  - Controlled tapering
+- Clock routing layer constraints definition
+- Clock transition constraint setup across all corners
+- Corner-based target skew definition
+- Scenario-aware clock uncertainty setup
+- Enable CRPR (Clock Reconvergence Pessimism Removal)
+- Definition of clock balance points for selected clock endpoints
+- Hold-fixing cell selection and control
+- Clock tree build phase
+- Clock tree routing phase
+- Post-CTS timing analysis
+- Aggressive hold-fix optimization
+- Final CTS optimization and cleanup
+- Save design block at each CTS milestone
+
+### Key Constraints & Strategies
+- Target skew defined per corner
+- Max clock transition limits enforced
+- Scenario-based clock uncertainty
+- Non-default routing rules for clocks
+- Controlled CTS and hold-fixing cell usage
+- CRPR enabled for accurate timing analysis
+
+### Key Checks & Reports
+- Global timing report (post-CTS)
+- Clock latency reports (per scenario)
+- Clock DRC violation report
+- Minimum pulse width violation report
+- Maximum transition violation report
+- Maximum capacitance violation report
+
+### Generated Outputs
+- CTS build block (`build_clock_done`)
+- CTS routed block (`route_clock_done`)
+- Final CTS optimized block (`final_clock_opt_done`)
+- Comprehensive CTS QoR reports
+
+📁 script location: `scripts/5_cts.tcl`
+
 ---
 
 ## 👤 Author
