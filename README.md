@@ -132,7 +132,7 @@ Implement a robust and DRC-clean power delivery network by creating power meshes
 
 📁 script location: `scripts/3_powerplan.tcl`
 
-## 📐 Stage 4: Placement (Completed)
+## 📐 Stage 4: Placement 
 
 ### Objective
 Place and optimize standard cells while meeting timing, congestion, and physical constraints, ensuring a legal and high-quality placement ready for Clock Tree Synthesis (CTS).
@@ -182,7 +182,7 @@ Place and optimize standard cells while meeting timing, congestion, and physical
 
 📁 script location: `scripts/4_placement.tcl`
 
-## ⏱️ Stage 5: Clock Tree Synthesis (CTS) (Completed)
+## ⏱️ Stage 5: Clock Tree Synthesis (CTS)
 
 ### Objective
 Build and optimize a balanced and low-skew clock distribution network that meets timing, transition, and signal integrity requirements across all operating corners and scenarios.
