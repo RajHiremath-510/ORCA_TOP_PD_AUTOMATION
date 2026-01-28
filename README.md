@@ -235,6 +235,73 @@ Build and optimize a balanced and low-skew clock distribution network that meets
 
 📁 script location: `scripts/5_cts.tcl`
 
+## 🧵 Stage 6: Routing (Completed)
+
+### Objective
+Perform timing-driven and signal-integrity-aware routing to achieve a fully connected, DRC-clean, and LVS-clean layout while preserving timing and power integrity.
+
+### Automated Tasks
+- Pre-routing design and routability checks
+- Pre-route design consistency verification
+- Enable timing-driven routing at global, track, and detail levels
+- Enable crosstalk-aware routing
+- Enable signal integrity (SI) analysis
+- Routing convergence tuning for DRC cleanup
+- Antenna rule loading
+- Automated routing flow:
+  - Global routing
+  - Track assignment
+  - Detail routing
+- Routing optimization
+- Save routed design block
+- Post-routing verification checks
+
+### Routing Strategies
+- Timing-driven routing enabled across all routing stages
+- Crosstalk-aware routing for improved signal integrity
+- Propagated clocks during routing
+- Increased routing iterations for improved DRC convergence
+- ECO-based routing for localized fixes
+
+### Key Checks & Reports
+
+#### Pre-Routing Checks
+- Routability check
+- Pre-route design check
+
+#### Post-Routing Checks
+- Power and ground connectivity check
+- Missing PG via check
+- Power DRC check
+- Routing DRC check
+- LVS check (zero-error tolerance)
+
+### Common Violations Handled
+- Metal shorts (same-net and different-net)
+- Minimum spacing violations
+- Minimum metal width and area violations
+- Fat contact (via enclosure) violations
+- Routing over restricted macro layers
+- Missing vias in power and signal nets
+
+### Debug & Fix Methodology
+- Manual GUI-based fixes for limited violations:
+  - Metal stretching
+  - Via replacement
+  - Layer reassignment
+- Batch fixes using TCL for large-scale violations
+- ECO routing for targeted net-level LVS fixes
+- Higher metal layer (M7) usage to avoid macro-level shorts
+
+### Generated Outputs
+- Routed and optimized design block (`route_opt_done`)
+- Pre-route check reports
+- Post-route DRC reports
+- PG connectivity reports
+- LVS report (zero errors)
+
+📁 script location: `scripts/6_routing.tcl`
+
 ---
 
 ## 👤 Author
