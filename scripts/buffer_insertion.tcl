@@ -26,3 +26,6 @@ while {[gets $fp line] >= 0} {
     }
 }
 close $fp
+
+#FINAL LEGALIZATION 
+legalize_placement -incremental
