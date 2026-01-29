@@ -235,7 +235,7 @@ Build and optimize a balanced and low-skew clock distribution network that meets
 
 📁 script location: `scripts/5_cts.tcl`
 
-## 🧵 Stage 6: Routing (Completed)
+## 🧵 Stage 6: Routing 
 
 ### Objective
 Perform timing-driven and signal-integrity-aware routing to achieve a fully connected, DRC-clean, and LVS-clean layout while preserving timing and power integrity.
@@ -301,6 +301,120 @@ Perform timing-driven and signal-integrity-aware routing to achieve a fully conn
 - LVS report (zero errors)
 
 📁 script location: `scripts/6_routing.tcl`
+
+## 🛠️ Stage 7: Timing Optimization & ECO Fixes (Completed)
+
+### Objective
+Resolve setup, hold, transition, and capacitance violations using structured timing analysis, path-based optimization, and ECO-friendly Physical Design techniques across placement and CTS stages.
+
+### Optimization Scope
+- Pre-placement & placement timing optimization
+- CTS skew and hold violation fixing
+- Post-CTS electrical violation cleanup
+- ECO-based incremental fixes without disturbing clean regions
+
+### Timing Optimization Techniques Used
+
+#### Group Path Optimization
+Logical classification of timing paths to enable focused optimization.
+
+**Common Path Groups**
+- Input → Register  
+- Register → Register  
+- Register → Output  
+- Clock → Register  
+
+**Why Used**
+- Prioritizes critical paths
+- Improves timing convergence
+- Simplifies timing analysis and reporting
+
+**Applied During**
+- Placement optimization
+- Timing analysis stages
+
+#### Magnet Placement
+Critical cells are pulled closer to reference objects (registers/macros) to reduce:
+- Wire length
+- Net delay
+- Timing violations
+
+**Use Case**
+- Critical datapath optimization
+- High-delay path cleanup
+
+#### Bound (Region) Creation
+Defines physical placement regions to control cell distribution.
+
+**Bound Types Used**
+- Hard bounds for strict placement control
+- Exclusive bounds for macro-related logic
+
+**Benefits**
+- Prevents congestion
+- Improves timing locality
+- Controls ECO impact
+
+### CTS-Level Fixes (Skew & Hold)
+
+#### Hold Violation Resolution
+- Capture clock delay insertion
+- Local buffer insertion on clock pins
+- Controlled delay using Low-VT buffers
+
+**Verification**
+- Post-fix timing reports confirm:
+  - Positive hold slack
+  - No setup degradation
+
+**Alternative ECO Fix**
+- Cell resizing using higher-delay variants when buffering is insufficient
+
+### Electrical Violation Fixes
+
+#### Transition Violations
+- Automated VT swap:
+  - RVT / LVT → HVT
+- Reduces slew violations without upsizing
+
+#### Capacitance Violations
+- Driver cell upsizing
+- Load-aware buffer insertion
+- Net-length-based buffer strategy
+
+#### Long Net Optimization
+- Distance-driven buffer insertion
+- Cell strength selected based on routing length
+
+### ECO Automation Highlights
+- Single-source violation reports:
+  - Transition violations
+  - Capacitance violations
+- TCL-driven batch fixes
+- Incremental legalization after ECO
+- Minimal disturbance to clean timing paths
+
+### Key Checks & Reports
+- Setup & hold timing reports
+- Clock skew analysis
+- Max transition violation report
+- Max capacitance violation report
+- Post-ECO timing verification
+
+### Generated Outputs
+- ECO-fixed placement database
+- Updated CTS timing reports
+- Electrical violation reports
+- Incrementally legalized design block
+
+📁 script location: `scripts/
+├── group_path.tcl
+├── magnet_placement.tcl
+├── bound_creation.tcl
+├── cts_hold_fix.tcl
+├── vt_swap.tcl
+├── cap_upsizing.tcl
+├── buffer_insertion.tcl`
 
 ---
 
