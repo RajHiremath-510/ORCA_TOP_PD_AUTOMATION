@@ -302,7 +302,7 @@ Perform timing-driven and signal-integrity-aware routing to achieve a fully conn
 
 📁 script location: `scripts/6_routing.tcl`
 
-## 🛠️ Stage 7: Timing Optimization & ECO Fixes (Completed)
+## 🛠️ Stage 7: Timing Optimization & ECO Fixes 
 
 ### Objective
 Resolve setup, hold, transition, and capacitance violations using structured timing analysis, path-based optimization, and ECO-friendly Physical Design techniques across placement and CTS stages.
@@ -407,14 +407,14 @@ Defines physical placement regions to control cell distribution.
 - Electrical violation reports
 - Incrementally legalized design block
 
-📁 script location: `scripts/
+📁 script location:  scripts/
 ├── group_path.tcl
 ├── magnet_placement.tcl
 ├── bound_creation.tcl
 ├── cts_hold_fix.tcl
 ├── vt_swap.tcl
 ├── cap_upsizing.tcl
-├── buffer_insertion.tcl`
+├── buffer_insertion.tcl
 
 ---
 
